@@ -31,9 +31,9 @@
       <ul>
           <li>
               If you see some such error
-              <h4>Unable to resolve '<any package showing here>'</h4>
+              <h4>Unable to resolve '{example-dependency}'</h4>
                 This Type of Error occure when you have not Install any react native dependency, so in order to resolve this You have to install the dependency by command:
-              <h4>npm install '<any package showing here>'</h4>
+              <h4>npm install '{example-dependency}'</h4>
           </li>
       </ul>
   </li>
