@@ -7,6 +7,13 @@ console.disableYellowBox = true;//hide warnings from simulator
 
 class MyApp extends Component{  
   
+  constructor(){
+    super();
+    // Creating Global Variable.
+    global.apiUrl = 'http://abitdemo.in:50005/';
+ 
+  }
+
   componentWillMount() {
     this.state = {
         view : <SplashScreen />

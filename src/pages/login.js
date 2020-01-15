@@ -57,7 +57,7 @@ class Login extends Component {
                     login_status:1,
                   }]
 
-                  fetch('http://localhost:4000/user', {
+                  fetch(global.apiUrl+'user', {
                       method: 'POST',
                       headers: {
                         Accept: 'application/json',
@@ -76,11 +76,13 @@ class Login extends Component {
                       // console.log(json);
                     })
                     .catch(function(error) {
+                      Toast.show("Server is Not Responding, Please try later");
                       console.log('There has been a problem with your fetch operation: ' + error.message);
                       throw error;
                     });
               })
               .catch(function(error) {
+                Toast.show("Server is Not Responding, Please try later");
                 console.log('There has been a problem with your fetch operation: ' + error.message);
                   throw error;
                 });
@@ -115,7 +117,7 @@ class Login extends Component {
           login_status:1,
         }]
 
-        fetch('http://localhost:4000/user', {
+        fetch(global.apiUrl+'user', {
             method: 'POST',
             headers: {
               Accept: 'application/json',
@@ -135,6 +137,7 @@ class Login extends Component {
             // console.log(json);
           })
           .catch(function(error) {
+            Toast.show("Server is Not Responding, Please try later");
             console.log('There has been a problem with your fetch operation: ' + error.message);
             throw error;
           });
@@ -157,12 +160,11 @@ class Login extends Component {
   
   sendOtp = (type) => 
   {
-      // Toast.show(type);
       if(type == 'mobile')
       {
           if(this.state.enterMobile != '' && parseInt(this.state.enterMobile.length) == 10)
           {
-              fetch('http://localhost:4000/user/sendOtp/'+this.state.enterMobile)
+              fetch(global.apiUrl+'/user/sendOtp/'+this.state.enterMobile)
                 .then((response) => response.json())
                 .then((json) => {
                     if(json.status == '1'){
@@ -175,6 +177,7 @@ class Login extends Component {
                     // console.log(json);
                 })
                 .catch(function(error) {
+                  Toast.show("Server is Not Responding, Please try later");
                   console.log('There has been a problem with your fetch operation: ' + error.message);
                   throw error;
                 });
@@ -184,7 +187,7 @@ class Login extends Component {
       }else{
           if(this.state.enterEmail != '')
           {
-              fetch('http://localhost:4000/user/sendEmailOtp/'+this.state.enterEmail)
+              fetch(global.apiUrl+'user/sendEmailOtp/'+this.state.enterEmail)
                 .then((response) => response.json())
                 .then((json) => {
                   if(json.status == '1'){
@@ -197,6 +200,7 @@ class Login extends Component {
                   // console.log(json);
                 })
                 .catch(function(error) {
+                  Toast.show("Server is Not Responding, Please try later");
                   console.log('There has been a problem with your fetch operation: ' + error.message);
                   throw error;
                 });
@@ -222,7 +226,7 @@ class Login extends Component {
           login_status:1,
         }]
 
-        fetch('http://localhost:4000/user', {
+        fetch(global.apiUrl+'/user', {
             method: 'POST',
             headers: {
               Accept: 'application/json',
@@ -241,6 +245,7 @@ class Login extends Component {
             // console.log(json);
           })
           .catch(function(error) {
+            Toast.show("Server is Not Responding, Please try later");
             console.log('There has been a problem with your fetch operation: ' + error.message);
             throw error;
           });
