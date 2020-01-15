@@ -19,5 +19,22 @@
           <li>npm install react-native-reanimated react-native-gesture-handler react-native-screens@^1.0.0-alpha.23</li>
       </ul>
   </li>
-  <li>fasf</li>
+  <li>
+      <h3>To Run Your Project</h3>
+      <ul>
+          <li>For Android : react-native run-android</li>
+          <li>For IOS : react-native run-ios</li>
+      </ul>
+  </li>
+  <li>
+      <h3>Error Handling & Troubleshooting:</h3>
+      <ul>
+          <li>
+              If you see some such error
+              <h4>Unable to resolve '<any package showing here>'</h4>
+                This Type of Error occure when you have not Install any react native dependency, so in order to resolve this You have to install the dependency by command:
+              <h4>npm install '<any package showing here>'</h4>
+          </li>
+      </ul>
+  </li>
 </ol>
